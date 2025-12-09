@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turminha do Guia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#0F6D71',    // Verde-petróleo
+                primary: '#1A8A8F', // Azul-esverdeado
+                yellow: '#FACB32',  // Amarelo-sol
+                white: '#FFFFFF'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Fredoka', sans-serif;
+        background-color: #FEF3C7; /* Fallback */
+      }
+      /* Custom scrollbar for fun feel */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FEF3C7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #FACB32; /* Brand Yellow */
+        border-radius: 20px;
+        border: 3px solid #FEF3C7;
+      }
+
+      /* Global Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.98) translateY(10px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+
+      @keyframes pulseSlow {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .animate-pulse-slow {
+        animation: pulseSlow 3s ease-in-out infinite;
+      }
+      
+      @keyframes popIn {
+        0% { transform: scale(0); opacity: 0; }
+        60% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); }
+      }
+      .animate-pop-in {
+        animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-25%); }
+      }
+      .animate-bounce {
+        animation: bounce 1s infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.7",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

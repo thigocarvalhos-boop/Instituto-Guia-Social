@@ -1,0 +1,7 @@
+{
+  "name": "Galerinha  do Guia - Jogo",
+  "description": "Um jogo educativo e divertido para crianças de 4 a 8 anos com a Turminha do Guia. Foco em cidadania, sustentabilidade e criatividade.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
